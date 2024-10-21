@@ -4,10 +4,9 @@ Small Javascript library for fun
 https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js
 
 
-# Comparison:
+## Comparison:
 
-In HTML:
-```
+In HTML:```
 <body>
 <h1>hambud.JS</h1>
 <div>
@@ -17,8 +16,7 @@ In HTML:
 </body>
 ```
 
-In hambud.JS:
-```
+In hambud.JS:```
 addChild("body",[
     h1({text: "hambud.JS"}),
     div({},[
