@@ -6,8 +6,8 @@ https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js
 
 ## Comparison:
 
-In HTML:```
-<body>
+In HTML:
+```<body>
 <h1>hambud.JS</h1>
 <div>
     <input type="text" placeholder="Write something" />
@@ -16,8 +16,8 @@ In HTML:```
 </body>
 ```
 
-In hambud.JS:```
-addChild("body",[
+In hambud.JS:
+```addChild("body",[
     h1({text: "hambud.JS"}),
     div({},[
         input({type: "text", placeholder="Write something"}),
