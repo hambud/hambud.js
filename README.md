@@ -15,24 +15,32 @@ Copy and save this code to html file:
 </script></html>
 ```
 
-Small example:
+Simple Counter with hambud.JS:
 ```
 <html><body></body>
 <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js"></script>
 <script>
 pageTitle("Welcome");
-set("body",{
-	css:{
-		backgroundColor: "#123",
-		color: "#def"
-	}
+set("body",{css:{
+			backgroundColor: "#123",
+			color: "#def"
+		}
 	},[
     h1({text: "hambud.JS"}),
     div({},[
-        input({type: "text", placeholder: "Write something"}),
-        button({text: "Click Me", events:{
+        input({id: "counter", type: "text", value: 0, css:{
+			height: "50px",
+			width: "50px",
+			fontSize: "20pt",
+			textAlign: "center",
+			margin: "5px"
+		}}),
+        button({text: "Counter", css:{
+			borderRadius: "10px",
+			padding: "15px"
+		},events:{
 			click: () => {
-				alert("Hello");
+				counter.value = parseInt(get("#counter").value) + 1;
 			}
 		}})
     ])]);
