@@ -8,7 +8,8 @@ https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js
 
 Copy and save this code to html file:
 ```
-<html><body></body><script type="application/javascript" src="https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js"></script>
+<html><body></body>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js"></script>
 <script>
 // Place your code here
 </script></html>
@@ -16,7 +17,8 @@ Copy and save this code to html file:
 
 Small example:
 ```
-<html><body></body><script type="application/javascript" src="https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js"></script>
+<html><body></body>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js"></script>
 <script>
 pageTitle("Welcome");
 set("body",{
