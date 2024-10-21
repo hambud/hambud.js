@@ -7,6 +7,7 @@ https://cdn.jsdelivr.net/gh/hambud/hambud.js@main/utilities.js
 # Comparison:
 
 In HTML:
+```
 <body>
 <h1>hambud.JS</h1>
 <div>
@@ -14,8 +15,10 @@ In HTML:
     <button>Click Me</button>
 </div>
 </body>
+```
 
 In hambud.JS:
+```
 addChild("body",[
     h1({text: "hambud.JS"}),
     div({},[
@@ -23,3 +26,4 @@ addChild("body",[
         button({text: "Click Me"})
     ])
 ]);
+```
