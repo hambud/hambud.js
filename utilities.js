@@ -1,3 +1,23 @@
+// const importJs = (jsFileName) => {
+// if(document.head.innerHTML.indexOf(jsFileName) == -1){    
+//     const jsScript = create("script", {src: jsFileName, defer:""});
+//     document.head.appendChild(jsScript);
+// }
+// };
+const importJs = (jsFileName) => {
+    // Check if script with the same src already exists
+    if (!document.querySelector(`script[src="${jsFileName}"]`)) {
+        const jsScript = script();
+        jsScript.src = jsFileName;
+        jsScript.defer = true; // defer the script execution until the page has finished parsing
+        // Optional: Handle loading errors
+        jsScript.onerror = () => {
+            console.error(`Failed to load the script: ${jsFileName}`);
+        };
+        addChild("head",[jsScript]);
+    }
+};
+
 const get = (strElement, parent = document) => {
     try {
         switch (strElement.charAt(0)) {
@@ -31,7 +51,7 @@ const set = (element, options = {}, children = []) => {
     if (element === null) {
         throw new Error("Invalid element provided to set function.");
     }
-    element = typeof element === "string" ? document.querySelector(element) : element;
+    element = typeof element === "string" ? get(element) : element; //document.querySelector(element) : element;
     // Handle element attributes (options)
     for (const [key, value] of Object.entries(options)) {
         switch (key) {
@@ -117,12 +137,6 @@ const addChild = (element, children) => {
     });
 };
 
-const importJs = (jsFileName) => {
-if(document.head.innerHTML.indexOf(jsFileName) == -1){    
-    const jsScript = create("script", {src: jsFileName, defer:""});
-    document.head.appendChild(jsScript);
-}
-};
 
 /*** All of the HTML tags ***/
 const a = (options = {}, children = []) => create("a", options, children);
