@@ -22,9 +22,9 @@ Simple Counter with hambud.JS:
 <script>
 pageTitle("Welcome");
 set("body",{css:{
-			backgroundColor: "#123",
-			color: "#def"
-		}
+		backgroundColor: "#123",
+		color: "#def"
+	}
 	},[
     h1({text: "hambud.JS"}),
     div({},[
