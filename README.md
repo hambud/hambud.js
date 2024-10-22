@@ -46,3 +46,37 @@ set("body",{css:{
     ])]);
 </script></html>
 ```
+
+Simple Counter with Plain Javascript:
+```
+<html><body></body>
+<script type="application/javascript">
+document.title = "Welcome";
+document.body.style.backgroundColor = "#123";
+document.body.style.color = "#def";
+const h1 = document.createElement("h1");
+h1.textContent = "Native JavaScript";
+document.body.appendChild(h1);
+const div = document.createElement("div");
+const input = document.createElement("input");
+input.id = "counter";
+input.type = "text";
+input.value = 0;
+input.style.height = "50px";
+input.style.width = "50px";
+input.style.fontSize = "20pt";
+input.style.textAlign = "center";
+input.style.margin = "5px";
+div.appendChild(input);
+const button = document.createElement("button");
+button.textContent = "Counter";
+button.style.borderRadius = "10px";
+button.style.padding = "15px";
+button.onclick = () => {
+  const counter = document.querySelector("#counter");
+  counter.value = parseInt(counter.value) + 1;
+};
+div.appendChild(button);
+document.body.appendChild(div);
+</script></html>
+```
