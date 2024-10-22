@@ -1,9 +1,3 @@
-// const importJs = (jsFileName) => {
-// if(document.head.innerHTML.indexOf(jsFileName) == -1){    
-//     const jsScript = create("script", {src: jsFileName, defer:""});
-//     document.head.appendChild(jsScript);
-// }
-// };
 const importJs = (jsFileName) => {
     // Check if script with the same src already exists
     if (!document.querySelector(`script[src="${jsFileName}"]`)) {
@@ -137,7 +131,6 @@ const addChild = (element, children) => {
     });
 };
 
-
 /*** All of the HTML tags ***/
 const a = (options = {}, children = []) => create("a", options, children);
 const abbr = (options = {}, children = []) => create("abbr", options, children);
@@ -251,62 +244,20 @@ const video = (options = {}, children = []) => create("video", options, children
 const wbr = (options = {}) => create("wbr", options);
 /******************************************************************************************************/
 
-// const ajax = (url, doneFunction, isAsync = true, sendMethod = "GET", formData = null, headers = {}) => {
-// const xhttp = new XMLHttpRequest();
-
-// xhttp.onreadystatechange = () => {
-//     if (xhttp.readyState === XMLHttpRequest.DONE) {
-//     if (xhttp.status === 200) {
-//         doneFunction(xhttp.responseText);
-//     } else {
-//         console.error(`Request to ${url} failed with status ${xhttp.status}`);
-//     }
-//     }
-// };
-
-// xhttp.open(sendMethod, url, isAsync);
-
-// Object.entries(headers).forEach(([name, value]) => {
-//     xhttp.setRequestHeader(name, value);
-// });
-
-// xhttp.send(formData);
-// };
-/******************************************************************************************************/
-// const ajax = (url, doneFunction, isAsync = true, sendMethod = "GET", formData = null, headers = {}) => {
-//     const options = {
-//         method: sendMethod,
-//         headers: headers,
-//     };
-//     if (formData) {
-//         options.body = formData;
-//     }
-//     if (isAsync) {
-//         fetch(url, options)
-//         .then(response => {
-//             if (!response.ok) {
-//             throw new Error(`Request to ${url} failed with status ${response.status}`);
-//             }
-//             return response.text();
-//         })
-//         .then(doneFunction)
-//         .catch(error => console.error(error));
-//     } else {
-//         (async () => {
-//         try {
-//             const response = await fetch(url, options);
-//             if (!response.ok) {
-//             throw new Error(`Request to ${url} failed with status ${response.status}`);
-//             }
-//             const data = await response.text();
-//             doneFunction(data);
-//         } catch (error) {
-//             console.error(error);
-//         }
-//         })();
-//     }
-// };
-
+/*
+ajax({
+    url: 'https://api.example.com/update-data',
+    method: 'PUT',
+    body: { 
+        key1: 'value1', 
+        key2: 'value2', 
+        key3: 'value3' 
+    },
+    doneFunction: (data) => {
+        console.log('Data updated:', data);
+    }
+});
+*/
 const ajax = ({
         url,
         doneFunction,
