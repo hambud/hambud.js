@@ -47,7 +47,7 @@ set("body",{css:{
 </script></html>
 ```
 
-Simple Counter with Plain Javascript:
+The same Simple Counter with plain Javascript:
 ```
 <html><body></body>
 <script type="application/javascript">
